@@ -25,9 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="GetGoodDomain\EntityInterfaces\Attributes\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\ClassAbilities\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\Classes\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\Ranks\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\Races\" />
     <Folder Include="GetGoodDomain\Managers\" />
-    <Folder Include="GetGoodDomain\Entities\" />
-    <Folder Include="GetGoodDomain\EntityInterfaces\" />
   </ItemGroup>
 
 </Project>
