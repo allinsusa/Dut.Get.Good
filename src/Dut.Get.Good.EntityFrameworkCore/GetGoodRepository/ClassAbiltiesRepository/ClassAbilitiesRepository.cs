@@ -14,9 +14,9 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace Dut.Get.Good.GetGoodRepository.ClassAbiltiesRepository
 {
-    public class CallAbilitiesRepository : EfCoreRepository<GoodDbContext, ClassAbility, Guid>, ICallAbilitiesRepository
+    public class ClassAbilitiesRepository : EfCoreRepository<GoodDbContext, ClassAbility, Guid>, IClassAbilitiesRepository
     {
-        public CallAbilitiesRepository(IDbContextProvider<GoodDbContext> dbContextProvider)
+        public ClassAbilitiesRepository(IDbContextProvider<GoodDbContext> dbContextProvider)
         : base(dbContextProvider)
         {
         }
@@ -41,7 +41,7 @@ namespace Dut.Get.Good.GetGoodRepository.ClassAbiltiesRepository
             return await dataReader.MapToList<ClassAbilitiesBasicInfo>(cancellationToken);
         }
 
-        public async Task<ClassAbilitiesBasicInfo> GetAttributeById(Guid ClassAbilityId, CancellationToken cancellationToken = default)
+        public async Task<ClassAbilitiesBasicInfo> GetClassAbilityById(Guid ClassAbilityId, CancellationToken cancellationToken = default)
         {
             var parameters = new SqlParameter[]
              {

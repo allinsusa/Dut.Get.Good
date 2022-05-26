@@ -8,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="GetGoodDomain\EntityInterfaces\ClassAbilities\**" />
     <Compile Remove="GetGoodDomain\Managers\**" />
-    <EmbeddedResource Remove="GetGoodDomain\EntityInterfaces\ClassAbilities\**" />
     <EmbeddedResource Remove="GetGoodDomain\Managers\**" />
-    <None Remove="GetGoodDomain\EntityInterfaces\ClassAbilities\**" />
     <None Remove="GetGoodDomain\Managers\**" />
   </ItemGroup>
 
