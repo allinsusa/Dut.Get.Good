@@ -27,18 +27,28 @@ namespace Dut.Get.Good.GetGoodRepository.RanksRepository
             };
             await RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), Token);
 
-            await using var Command = RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "CreateCategory", CommandType.StoredProcedure, Parameters);
+            await using var Command = RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Rank_AddNewRank", CommandType.StoredProcedure, Parameters);
             await Command.ExecuteReaderAsync(Token);
         }
 
         public async Task<IEnumerable<RankBasicInfo>> GetAllRanksAsync(CancellationToken Token = default)
         {
-            throw new NotImplementedException();
+            using var command = RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Rank_GetAllRanks", CommandType.StoredProcedure);
+            using var dataReader = await command.ExecuteReaderAsync(Token);
+            return await dataReader.MapToList<RankBasicInfo>(Token);
         }
 
         public async Task<RankBasicInfo> GetRankByIdAsync(Guid RankId, CancellationToken Token = default)
         {
-            throw new NotImplementedException();
+            var Parameters = new[]
+            {
+               new SqlParameter("@RankId", RankId)
+            };
+
+            await RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), Token);
+            await using var Command = RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Rank_GetRankById", CommandType.StoredProcedure, Parameters);
+            await using var DataReader = await Command.ExecuteReaderAsync(Token);
+            return await DataReader.MapToObject<RankBasicInfo>(Token);
         }
     }
 }
