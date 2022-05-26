@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dut.Get.Good.GetGoodDomain.Entities.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,8 +10,8 @@ namespace Dut.Get.Good.GetGoodDomain.EntityInterfaces
 {
     public interface IAttributesRepository : IBasicRepository<Attribute, Guid>
     {
-        Task<List<Attribute>> GetAllAttributes(CancellationToken cancellationToken = default);
-        Task<Attribute> GetAttributeById(Guid AttributeId, CancellationToken cancellationToken = default);
-        Task AddAttribute(Attribute AttributeModel, CancellationToken cancellationToken = default);
+        Task<List<AttributeBasicInfo>> GetAllAttributes(CancellationToken cancellationToken = default);
+        Task<AttributeBasicInfo> GetAttributeById(Guid AttributeId, CancellationToken cancellationToken = default);
+        Task AddAttribute(NewAttribute AttributeModel, CancellationToken cancellationToken = default);
     }
 }
