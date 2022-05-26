@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Dut.Get.Good.GetGoodDomain.Entities.Ranks;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -48,7 +49,8 @@ public class GoodDbContext :
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
 
     //Get Good
-    public DbSet<Attribute> Attributes { get; set; }
+    public DbSet<Attribute> Attribute { get; set; }
+    public DbSet<Rank> Rank { get; set; }
 
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
@@ -77,13 +79,9 @@ public class GoodDbContext :
         builder.ConfigureFeatureManagement();
         builder.ConfigureTenantManagement();
 
-        /* Configure your own tables/entities inside here */
-
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(GoodConsts.DbTablePrefix + "YourEntities", GoodConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        #region Stored procedure entities
+        builder.Entity<NewRank>().HasNoKey().ToView(null);
+        builder.Entity<RankBasicInfo>().HasNoKey().ToView(null);
+        #endregion
     }
 }
