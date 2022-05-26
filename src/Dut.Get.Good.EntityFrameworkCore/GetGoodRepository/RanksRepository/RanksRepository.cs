@@ -1,9 +1,11 @@
-﻿using Dut.Get.Good.EntityFrameworkCore;
+﻿using Dut.Get.Good.Configuration.CommandAndConnectionManager;
+using Dut.Get.Good.EntityFrameworkCore;
 using Dut.Get.Good.GetGoodDomain.Entities.Ranks;
 using Dut.Get.Good.GetGoodDomain.EntityInterfaces.Ranks;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
