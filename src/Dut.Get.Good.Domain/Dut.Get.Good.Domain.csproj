@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GetGoodDomain\Managers\**" />
+    <EmbeddedResource Remove="GetGoodDomain\Managers\**" />
+    <None Remove="GetGoodDomain\Managers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Dut.Get.Good.Domain.Shared\Dut.Get.Good.Domain.Shared.csproj" />
   </ItemGroup>
 
@@ -22,15 +28,6 @@
     <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="5.2.2" />
     <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="5.2.2" />
     <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="5.2.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="GetGoodDomain\EntityInterfaces\Attributes\" />
-    <Folder Include="GetGoodDomain\EntityInterfaces\ClassAbilities\" />
-    <Folder Include="GetGoodDomain\EntityInterfaces\Classes\" />
-    <Folder Include="GetGoodDomain\EntityInterfaces\Ranks\" />
-    <Folder Include="GetGoodDomain\EntityInterfaces\Races\" />
-    <Folder Include="GetGoodDomain\Managers\" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using Attribute = Dut.Get.Good.GetGoodDomain.Entities.Attributes.Attribute;
 
 namespace Dut.Get.Good.EntityFrameworkCore;
 
@@ -45,6 +46,9 @@ public class GoodDbContext :
     public DbSet<OrganizationUnit> OrganizationUnits { get; set; }
     public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
+
+    //Get Good
+    public DbSet<Attribute> Attributes { get; set; }
 
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
