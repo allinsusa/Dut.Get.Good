@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GetGoodDomain\EntityInterfaces\ClassAbilities\**" />
     <Compile Remove="GetGoodDomain\Managers\**" />
+    <EmbeddedResource Remove="GetGoodDomain\EntityInterfaces\ClassAbilities\**" />
     <EmbeddedResource Remove="GetGoodDomain\Managers\**" />
+    <None Remove="GetGoodDomain\EntityInterfaces\ClassAbilities\**" />
     <None Remove="GetGoodDomain\Managers\**" />
   </ItemGroup>
 
@@ -32,7 +35,6 @@
 
   <ItemGroup>
     <Folder Include="GetGoodDomain\EntityInterfaces\Attributes\" />
-    <Folder Include="GetGoodDomain\EntityInterfaces\ClassAbilities\" />
     <Folder Include="GetGoodDomain\EntityInterfaces\Classes\" />
     <Folder Include="GetGoodDomain\EntityInterfaces\Races\" />
   </ItemGroup>
