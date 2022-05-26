@@ -1,0 +1,23 @@
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[ClassAbi_GetAllClassAbilities]
+AS
+BEGIN
+    SELECT ca.Id AS 'ClassAbilityId',
+           ca.ClassId,
+           c.[ClassDescription],
+           ca.AttributeId,
+           a.AttributeDescription,
+           ca.AbilityDescription
+    FROM   [dbo].[AppClassAbility] AS ca
+           INNER JOIN
+           [dbo].[AppClass] AS c
+           ON c.Id = ca.ClassId
+           INNER JOIN
+           [dbo].[AppAttribute] AS a
+           ON a.Id = ca.AttributeId;
+END
+
+GO
