@@ -23,8 +23,7 @@ public class GoodMenuContributor : IMenuContributor
         var administration = context.Menu.GetAdministration();
         var l = context.GetLocalizer<GoodResource>();
 
-        context.Menu.Items.Insert(
-            0,
+        context.Menu.Items.Insert(0,
             new ApplicationMenuItem(
                 GoodMenus.Home,
                 l["Menu:Home"],
@@ -33,6 +32,17 @@ public class GoodMenuContributor : IMenuContributor
                 order: 0
             )
         );
+
+        context.Menu.Items.Insert(1,
+    new ApplicationMenuItem(
+        GoodMenus.Ranks,
+        l["Menu:Home"],
+        "~/",
+        icon: "fas fa-home",
+        order: 0
+    )
+);
+
 
         if (MultiTenancyConsts.IsEnabled)
         {
