@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dut.Get.Good.GetGoodDomain.Entities.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;

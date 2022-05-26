@@ -41,8 +41,8 @@ namespace Dut.Get.Good.GetGoodRepository.AttributesRepository
 
         public async Task<List<AttributeBasicInfo>> GetAllAttributes(CancellationToken cancellationToken = default)
         {
-            await DbConfigurations.Configurations.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
-            using var command = DbConfigurations.Configurations.CreateCommand(await GetDbContextAsync(), "Attr_GetAllAttributes", CommandType.StoredProcedure);
+            await Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
+            using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Attr_GetAllAttributes", CommandType.StoredProcedure);
             using var dataReader = await command.ExecuteReaderAsync(cancellationToken);
             return await dataReader.MapToList<AttributeBasicInfo>(cancellationToken);
         }
@@ -53,8 +53,8 @@ namespace Dut.Get.Good.GetGoodRepository.AttributesRepository
              {
                  new SqlParameter("@AttributeId",AttributeId)
              };
-            await DbConfigurations.Configurations.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
-            using var command = DbConfigurations.Configurations.CreateCommand(await GetDbContextAsync(), "Attr_GetAttributeById", CommandType.StoredProcedure, parameters);
+            await Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
+            using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Attr_GetAttributeById", CommandType.StoredProcedure, parameters);
             using var dataReader = await command.ExecuteReaderAsync(cancellationToken);
             return await dataReader.MapToObject<AttributeBasicInfo>(cancellationToken);
         }
