@@ -1,0 +1,33 @@
+﻿@page
+@model Dut.Get.Good.Web.Pages.Class.ClassBasicInfoDetailsModel
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-header-rose">
+                        <div class="card-icon">
+                            <i class="material-icons">all_inclusive</i>
+                        </div>
+                        <h4 class="card-title">
+                            Class Details
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Attibute</label>
+                                    <input type="text" class="form-control" value="@Model.ObjectToDisplay.ClassDescription">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-rose pull-right">Modify</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

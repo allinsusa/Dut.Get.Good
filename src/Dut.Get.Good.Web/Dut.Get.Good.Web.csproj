@@ -86,4 +86,8 @@
     <None Include="wwwroot\libs\theme\js\plugins\sweetalert2.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\libs\theme\" />
+  </ItemGroup>
+
 </Project>
