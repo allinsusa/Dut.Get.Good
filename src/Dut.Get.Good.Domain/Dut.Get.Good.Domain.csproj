@@ -30,4 +30,11 @@
     <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="5.2.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="GetGoodDomain\EntityInterfaces\Attributes\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\ClassAbilities\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\Classes\" />
+    <Folder Include="GetGoodDomain\EntityInterfaces\Races\" />
+  </ItemGroup>
+
 </Project>

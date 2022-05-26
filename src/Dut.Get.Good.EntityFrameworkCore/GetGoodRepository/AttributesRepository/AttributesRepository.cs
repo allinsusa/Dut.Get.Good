@@ -12,7 +12,7 @@ using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 using Attribute = Dut.Get.Good.GetGoodDomain.Entities.Attributes.Attribute;
 
-namespace Dut.Get.Good.Repositories.AttributesRepository
+namespace Dut.Get.Good.GetGoodRepository.AttributesRepository
 {
     public class AttributesRepository : EfCoreRepository<GoodDbContext, Attribute, Guid>, IAttributesRepository
     {
@@ -53,7 +53,7 @@ namespace Dut.Get.Good.Repositories.AttributesRepository
                  new SqlParameter("@AttributeId",attributeId)
              };
             await DbConfigurations.Configurations.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
-            using var command = DbConfigurations.Configurations.CreateCommand(await GetDbContextAsync(), "Attr_GetAttributeById", CommandType.StoredProcedure,parameters);
+            using var command = DbConfigurations.Configurations.CreateCommand(await GetDbContextAsync(), "Attr_GetAttributeById", CommandType.StoredProcedure, parameters);
             using var dataReader = await command.ExecuteReaderAsync(cancellationToken);
             return await dataReader.MapToObject<Attribute>(cancellationToken);
         }
