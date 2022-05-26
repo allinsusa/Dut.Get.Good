@@ -55,7 +55,35 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\libs\" />
+    <None Include="Pages\Shared\_FooterLayout.cshtml" />
+    <None Include="Pages\Shared\_HeaderLayout.cshtml" />
+    <None Include="Pages\Shared\_Layout.cshtml" />
+    <None Include="Pages\Shared\_NotLoggedIn.cshtml" />
+    <None Include="Pages\Shared\_Scripts.cshtml" />
+    <None Include="Pages\Shared\_SideBarLayout.cshtml" />
+    <None Include="Pages\Shared\_StyleSheet.cshtml" />
+    <None Include="wwwroot\libs\theme\css\material-dashboard.css.map" />
+    <None Include="wwwroot\libs\theme\js\core\bootstrap-material-design.min.js" />
+    <None Include="wwwroot\libs\theme\js\core\jquery.min.js" />
+    <None Include="wwwroot\libs\theme\js\core\popper.min.js" />
+    <None Include="wwwroot\libs\theme\js\material-dashboard.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\arrive.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-datetimepicker.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-notify.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-selectpicker.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-tagsinput.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\chartist.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\fullcalendar.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\jasny-bootstrap.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\jquery-jvectormap.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\jquery.bootstrap-wizard.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\jquery.dataTables.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\jquery.tagsinput.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\jquery.validate.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\moment.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\nouislider.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <None Include="wwwroot\libs\theme\js\plugins\sweetalert2.js" />
   </ItemGroup>
 
 </Project>

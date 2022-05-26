@@ -1,0 +1,44 @@
+﻿@page
+@model Dut.Get.Good.Web.Pages.Ranks.IndexModel
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon card-header-rose">
+                            <div class="card-icon">
+                                <i class="material-icons">star</i>
+                            </div>
+                            <h4 class="card-title ">All Rankings</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>Ranking</th>
+                                    <th>Option(s)</th>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var Ranking in Model.ObjectToDisplay)
+                                        {
+                                            <tr>
+                                                <td>@Ranking.RankDescription</td>
+                                                <td>
+                                                    <a href="/Ranks/RankingDetails?RankingId= @Ranking.RankId">
+                                                        <i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="see details">visibility</i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

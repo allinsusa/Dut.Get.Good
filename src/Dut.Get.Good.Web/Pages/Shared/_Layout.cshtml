@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"]  DUT Get Good</title>
+	<partial name="/Pages/Shared/_StyleSheet.cshtml" />
+	@await RenderSectionAsync("Stylesheets", false)
+</head>
+
+<body class="">
+	<div class="wrapper">
+		@await Html.PartialAsync("_SideBarLayout")
+		<div class="main-panel">
+			@await Html.PartialAsync("_HeaderLayout")
+
+			@RenderBody()
+			@await Html.PartialAsync("~/Pages/Shared/_FooterLayout.cshtml")
+		</div>
+	</div>
+	<partial name="/Pages/Shared/_Scripts.cshtml" />
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
