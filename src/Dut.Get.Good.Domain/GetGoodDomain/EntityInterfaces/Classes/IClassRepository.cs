@@ -11,7 +11,7 @@ namespace Dut.Get.Good.GetGoodDomain.EntityInterfaces.Classes
     public interface IClassRepository
     {
         Task AddNewClass(AddNewClass ClassAbilty, CancellationToken cancellationToken = default);
-        Task<List<ClassFullDetails>> GetAllClasses(CancellationToken cancellationToken = default);
-        Task<ClassFullDetails> GetClassById(Guid ClassId, CancellationToken cancellationToken = default);
+        Task<List<ClassBasicInfo>> GetAllClasses(CancellationToken cancellationToken = default);
+        Task<ClassBasicInfo> GetClassById(Guid ClassId, CancellationToken cancellationToken = default);
     }
 }

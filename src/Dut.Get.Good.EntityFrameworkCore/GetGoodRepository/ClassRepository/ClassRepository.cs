@@ -31,15 +31,15 @@ namespace Dut.Get.Good.GetGoodRepository.ClassRepository
             await command.ExecuteScalarAsync(cancellationToken);
         }
 
-        public async Task<List<ClassFullDetails>> GetAllClasses(CancellationToken cancellationToken = default)
+        public async Task<List<ClassBasicInfo>> GetAllClasses(CancellationToken cancellationToken = default)
         {
             await Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
             using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Class_GetAllClasses", CommandType.StoredProcedure);
             using var dataReader = await command.ExecuteReaderAsync(cancellationToken);
-            return await dataReader.MapToList<ClassFullDetails>(cancellationToken);
+            return await dataReader.MapToList<ClassBasicInfo>(cancellationToken);
         }
 
-        public async Task<ClassFullDetails> GetClassById(Guid ClassId, CancellationToken cancellationToken = default)
+        public async Task<ClassBasicInfo> GetClassById(Guid ClassId, CancellationToken cancellationToken = default)
         {
             var parameters = new SqlParameter[] {
                 new SqlParameter("@ClassId",ClassId)
@@ -47,7 +47,7 @@ namespace Dut.Get.Good.GetGoodRepository.ClassRepository
             await Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
             using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Class_GetClassById", CommandType.StoredProcedure);
             using var dataReader = await command.ExecuteReaderAsync(cancellationToken);
-            return await dataReader.MapToObject<ClassFullDetails>(cancellationToken);
+            return await dataReader.MapToObject<ClassBasicInfo>(cancellationToken);
         }
     }
 }

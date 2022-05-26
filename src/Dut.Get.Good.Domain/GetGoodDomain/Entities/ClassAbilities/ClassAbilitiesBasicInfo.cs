@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities
 {
-    public class ClassAbilitiesFullDetails
+    public class ClassAbilitiesBasicInfo
     {
         public Guid ClassAbilityId { get; set; }
         public Guid ClassId { get; set; }
