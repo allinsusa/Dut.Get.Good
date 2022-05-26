@@ -33,6 +33,8 @@ namespace Dut.Get.Good.GetGoodRepository.RanksRepository
 
         public async Task<IEnumerable<RankBasicInfo>> GetAllRanksAsync(CancellationToken Token = default)
         {
+            await RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), Token);
+
             using var command = RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Rank_GetAllRanks", CommandType.StoredProcedure);
             using var dataReader = await command.ExecuteReaderAsync(Token);
             return await dataReader.MapToList<RankBasicInfo>(Token);
