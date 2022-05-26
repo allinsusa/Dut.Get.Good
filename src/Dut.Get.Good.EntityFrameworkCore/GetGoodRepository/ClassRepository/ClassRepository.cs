@@ -45,7 +45,7 @@ namespace Dut.Get.Good.GetGoodRepository.ClassRepository
                 new SqlParameter("@ClassId",ClassId)
             };
             await Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
-            using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Class_GetClassById", CommandType.StoredProcedure);
+            using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Class_GetClassById", CommandType.StoredProcedure, parameters);
             using var dataReader = await command.ExecuteReaderAsync(cancellationToken);
             return await dataReader.MapToObject<ClassBasicInfo>(cancellationToken);
         }
