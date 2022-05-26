@@ -9,9 +9,9 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties
     public interface IClassAbiltiesAppService
     {
         Task AddNewClassAbility(NewClassAbilityDto ClassAbilty);
-        Task<List<ClassAbilitiesBasicInfoDto>> GetAllClassAbilities();
-        Task<ClassAbilitiesBasicInfoDto> GetAttributeById(Guid ClassAbilityId);
-        Task<List<ClassAbilitiesBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId);
+        Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilities();
+        Task<ClassAbilityBasicInfoDto> GetAttributeById(Guid ClassAbilityId);
+        Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId);
 
     }
 }

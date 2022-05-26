@@ -23,16 +23,16 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.Races
             await _racesRepository.AddNewRace(race);
         }
 
-        public async Task<List<RacesBasicInfoDto>> GetAllRaces()
+        public async Task<List<RaceBasicInfoDto>> GetAllRaces()
         {
             var allRaces = await _racesRepository.GetAllRaces();
-            return ObjectMapper.Map<List<RacesBasicInfo>,List<RacesBasicInfoDto>>(allRaces);
+            return ObjectMapper.Map<List<RacesBasicInfo>,List<RaceBasicInfoDto>>(allRaces);
         }
 
-        public async Task<RacesBasicInfoDto> GetRaceById(Guid RaceId)
+        public async Task<RaceBasicInfoDto> GetRaceById(Guid RaceId)
         {
             var allRaces = await _racesRepository.GetRaceById(RaceId);
-            return ObjectMapper.Map<RacesBasicInfo, RacesBasicInfoDto>(allRaces);
+            return ObjectMapper.Map<RacesBasicInfo, RaceBasicInfoDto>(allRaces);
         }
     }
 }

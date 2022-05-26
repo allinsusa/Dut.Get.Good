@@ -8,8 +8,8 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.Races
 {
     public interface IRacesAppService
     {
-        Task<List<RacesBasicInfoDto>> GetAllRaces();
+        Task<List<RaceBasicInfoDto>> GetAllRaces();
         Task AddNewRace(NewRaceDto NewRace);
-        Task<RacesBasicInfoDto> GetRaceById(Guid ClassAbilityId);
+        Task<RaceBasicInfoDto> GetRaceById(Guid ClassAbilityId);
     }
 }

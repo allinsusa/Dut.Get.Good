@@ -20,11 +20,11 @@ public class GoodApplicationAutoMapperProfile : Profile
         CreateMap<NewAttributeDto, NewAttribute>();
         CreateMap<AttributeBasicInfo, AttributeBasicInfoDto>();
         CreateMap<NewClassAbilityDto, NewClassAbility>();
-        CreateMap<ClassAbilitiesBasicInfo, ClassAbilitiesBasicInfoDto>();
+        CreateMap<ClassAbilitiesBasicInfo, ClassAbilityBasicInfoDto>();
         CreateMap<AddNewClassDto, AddNewClass>(); 
         CreateMap<ClassBasicInfo, ClassBasicInfoDto>();
         CreateMap<NewRaceDto, NewRace>();
-        CreateMap<RacesBasicInfo, RacesBasicInfoDto>();
+        CreateMap<RacesBasicInfo, RaceBasicInfoDto>();
 
     }
 }

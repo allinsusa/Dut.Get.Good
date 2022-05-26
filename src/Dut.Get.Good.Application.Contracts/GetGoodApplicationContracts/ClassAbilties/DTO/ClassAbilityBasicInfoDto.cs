@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO
 {
-    public class ClassAbilitiesBasicInfoDto
+    public class ClassAbilityBasicInfoDto
     {
         public Guid ClassAbilityId { get; set; }
         public Guid ClassId { get; set; }

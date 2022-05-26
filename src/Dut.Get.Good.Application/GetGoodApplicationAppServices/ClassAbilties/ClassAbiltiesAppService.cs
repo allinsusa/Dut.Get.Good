@@ -23,22 +23,22 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
             await _callAbilitiesRepository.AddNewClassAbility(classAbilityEntity);
         }
 
-        public async Task<List<ClassAbilitiesBasicInfoDto>> GetAllClassAbilities()
+        public async Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilities()
         {
             var allClassAbilities = await _callAbilitiesRepository.GetAllClassAbilities();
-            return ObjectMapper.Map<List<ClassAbilitiesBasicInfo>,List<ClassAbilitiesBasicInfoDto>>(allClassAbilities);
+            return ObjectMapper.Map<List<ClassAbilitiesBasicInfo>,List<ClassAbilityBasicInfoDto>>(allClassAbilities);
         }
 
-        public async Task<List<ClassAbilitiesBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId)
+        public async Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId)
         {
             var allClassAbilities = await _callAbilitiesRepository.GetAllClassAbilitiesByClassId(ClassId);
-            return ObjectMapper.Map<List<ClassAbilitiesBasicInfo>, List<ClassAbilitiesBasicInfoDto>>(allClassAbilities);
+            return ObjectMapper.Map<List<ClassAbilitiesBasicInfo>, List<ClassAbilityBasicInfoDto>>(allClassAbilities);
         }
 
-        public async Task<ClassAbilitiesBasicInfoDto> GetAttributeById(Guid ClassAbilityId)
+        public async Task<ClassAbilityBasicInfoDto> GetAttributeById(Guid ClassAbilityId)
         {
             var classAbility = await _callAbilitiesRepository.GetClassAbilityById(ClassAbilityId);
-            return ObjectMapper.Map<ClassAbilitiesBasicInfo, ClassAbilitiesBasicInfoDto>(classAbility);
+            return ObjectMapper.Map<ClassAbilitiesBasicInfo, ClassAbilityBasicInfoDto>(classAbility);
         }
     }
 }
