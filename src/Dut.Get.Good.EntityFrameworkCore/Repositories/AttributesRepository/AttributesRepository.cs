@@ -21,7 +21,7 @@ namespace Dut.Get.Good.Repositories.AttributesRepository
         {
         }
 
-        public Task<Attribute> AddAttribute(Attribute attributeModel, CancellationToken cancellationToken = default)
+        public async Task AddAttribute(Attribute AttributeModel, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -46,11 +46,11 @@ namespace Dut.Get.Good.Repositories.AttributesRepository
             return await dataReader.MapToList<Attribute>(cancellationToken);
         }
 
-        public async Task<Attribute> GetAttributeById(Guid attributeId, CancellationToken cancellationToken = default)
+        public async Task<Attribute> GetAttributeById(Guid AttributeId, CancellationToken cancellationToken = default)
         {
             var parameters = new SqlParameter[]
              {
-                 new SqlParameter("@AttributeId",attributeId)
+                 new SqlParameter("@AttributeId",AttributeId)
              };
             await DbConfigurations.Configurations.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
             using var command = DbConfigurations.Configurations.CreateCommand(await GetDbContextAsync(), "Attr_GetAttributeById", CommandType.StoredProcedure,parameters);
