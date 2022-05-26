@@ -10,7 +10,7 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties
     {
         Task AddNewClassAbility(NewClassAbilityDto ClassAbilty);
         Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilities();
-        Task<ClassAbilityBasicInfoDto> GetAttributeById(Guid ClassAbilityId);
+        Task<ClassAbilityBasicInfoDto> GetClassAbilityById(Guid ClassAbilityId);
         Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId);
 
     }

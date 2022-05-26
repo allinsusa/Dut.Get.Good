@@ -11,9 +11,9 @@ namespace Dut.Get.Good.GetGoodDomain.EntityInterfaces.CallAbilities
     public interface IClassAbilitiesRepository
     {
         Task AddNewClassAbility(NewClassAbility ClassAbilty, CancellationToken cancellationToken = default);
-        Task<List<ClassAbilitiesBasicInfo>> GetAllClassAbilities(CancellationToken cancellationToken = default);
-        Task<ClassAbilitiesBasicInfo> GetClassAbilityById(Guid ClassAbilityId, CancellationToken cancellationToken = default);
-        Task<List<ClassAbilitiesBasicInfo>> GetAllClassAbilitiesByClassId(Guid ClassId, CancellationToken cancellationToken = default);
+        Task<List<ClassAbilityBasicInfo>> GetAllClassAbilities(CancellationToken cancellationToken = default);
+        Task<ClassAbilityBasicInfo> GetClassAbilityById(Guid ClassAbilityId, CancellationToken cancellationToken = default);
+        Task<List<ClassAbilityBasicInfo>> GetAllClassAbilitiesByClassId(Guid ClassId, CancellationToken cancellationToken = default);
 
 
     }

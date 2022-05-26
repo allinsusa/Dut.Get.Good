@@ -4,8 +4,6 @@ using Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities;
 using Dut.Get.Good.GetGoodDomain.EntityInterfaces.CallAbilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
@@ -19,26 +17,26 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
         }
         public async Task AddNewClassAbility(NewClassAbilityDto ClassAbilty)
         {
-            var classAbilityEntity = ObjectMapper.Map<NewClassAbilityDto, NewClassAbility>(ClassAbilty);
-            await _callAbilitiesRepository.AddNewClassAbility(classAbilityEntity);
+            var Model = ObjectMapper.Map<NewClassAbilityDto, NewClassAbility>(ClassAbilty);
+            await _callAbilitiesRepository.AddNewClassAbility(Model);
         }
 
         public async Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilities()
         {
-            var allClassAbilities = await _callAbilitiesRepository.GetAllClassAbilities();
-            return ObjectMapper.Map<List<ClassAbilitiesBasicInfo>,List<ClassAbilityBasicInfoDto>>(allClassAbilities);
+            var DbModel = await _callAbilitiesRepository.GetAllClassAbilities();
+            return ObjectMapper.Map<List<ClassAbilityBasicInfo>,List<ClassAbilityBasicInfoDto>>(DbModel);
         }
 
         public async Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId)
         {
-            var allClassAbilities = await _callAbilitiesRepository.GetAllClassAbilitiesByClassId(ClassId);
-            return ObjectMapper.Map<List<ClassAbilitiesBasicInfo>, List<ClassAbilityBasicInfoDto>>(allClassAbilities);
+            var DbModel = await _callAbilitiesRepository.GetAllClassAbilitiesByClassId(ClassId);
+            return ObjectMapper.Map<List<ClassAbilityBasicInfo>, List<ClassAbilityBasicInfoDto>>(DbModel);
         }
 
-        public async Task<ClassAbilityBasicInfoDto> GetAttributeById(Guid ClassAbilityId)
+        public async Task<ClassAbilityBasicInfoDto> GetClassAbilityById(Guid ClassAbilityId)
         {
-            var classAbility = await _callAbilitiesRepository.GetClassAbilityById(ClassAbilityId);
-            return ObjectMapper.Map<ClassAbilitiesBasicInfo, ClassAbilityBasicInfoDto>(classAbility);
+            var DbModel = await _callAbilitiesRepository.GetClassAbilityById(ClassAbilityId);
+            return ObjectMapper.Map<ClassAbilityBasicInfo, ClassAbilityBasicInfoDto>(DbModel);
         }
     }
 }

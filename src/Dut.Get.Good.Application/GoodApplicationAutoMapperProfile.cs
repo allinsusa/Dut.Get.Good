@@ -20,7 +20,7 @@ public class GoodApplicationAutoMapperProfile : Profile
         CreateMap<NewAttributeDto, NewAttribute>();
         CreateMap<AttributeBasicInfo, AttributeBasicInfoDto>();
         CreateMap<NewClassAbilityDto, NewClassAbility>();
-        CreateMap<ClassAbilitiesBasicInfo, ClassAbilityBasicInfoDto>();
+        CreateMap<ClassAbilityBasicInfo, ClassAbilityBasicInfoDto>();
         CreateMap<AddNewClassDto, AddNewClass>(); 
         CreateMap<ClassBasicInfo, ClassBasicInfoDto>();
         CreateMap<NewRaceDto, NewRace>();

@@ -1,4 +1,49 @@
 ﻿@page
 @model Dut.Get.Good.Web.Pages.ClassAbilities.IndexModel
-@{
-}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon card-header-rose">
+                            <div class="card-icon">
+                                <i class="material-icons">all_inclusive</i>
+                            </div>
+                            <h4 class="card-title ">All Classes & Abilities</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>Class</th>
+                                    <th>Ability </th>
+                                    <th>Attribute Description</th>
+                                    <th>Option(s)</th>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var ClassAbility in Model.ObjectToDisplay)
+                                        {
+                                            <tr>
+                                                <td>@ClassAbility.ClassDescription</td>
+                                                <td>@ClassAbility.AbilityDescription</td>
+                                                <td>@ClassAbility.AttributeDescription</td>
+                                                <td>
+                                                    <a href="/ClassAbilities/ClassAbilityDetails?ClassAbilityId= @ClassAbility.ClassAbilityId">
+                                                        <i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="see details">visibility</i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

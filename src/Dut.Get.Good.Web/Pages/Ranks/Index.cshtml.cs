@@ -2,7 +2,6 @@ using Dut.Get.Good.GetGoodApplicationContracts.Ranks;
 using Dut.Get.Good.GetGoodApplicationContracts.Ranks.DTO;
 using Dut.Get.Good.Web.ViewModels.Ranks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

@@ -9,5 +9,6 @@ namespace Dut.Get.Good.Web.ViewModels.ClassAbilities
         public string ClassDescription { get; set; }
         public Guid AttributeId { get; set; }
         public string AttributeDescription { get; set; }
+        public string AbilityDescription { get; set; }
     }
 }

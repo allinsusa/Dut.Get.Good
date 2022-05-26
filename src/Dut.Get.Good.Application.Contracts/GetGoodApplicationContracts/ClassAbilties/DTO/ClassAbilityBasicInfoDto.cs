@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO
 {
@@ -11,5 +9,6 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO
         public string ClassDescription { get; set; }
         public Guid AttributeId { get; set; }
         public string AttributeDescription { get; set; }
+        public string AbilityDescription { get; set; }
     }
 }
