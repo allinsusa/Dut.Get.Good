@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Dut.Get.Good.GetGoodApplicationContracts.Class.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO;
+using Dut.Get.Good.GetGoodApplicationContracts.Races.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.Ranks.DTO;
 using Dut.Get.Good.GetGoodDomain.Entities.Attributes;
 using Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities;
 using Dut.Get.Good.GetGoodDomain.Entities.Classes;
+using Dut.Get.Good.GetGoodDomain.Entities.Races;
 using Dut.Get.Good.GetGoodDomain.Entities.Ranks;
 
 namespace Dut.Get.Good;
@@ -21,6 +23,8 @@ public class GoodApplicationAutoMapperProfile : Profile
         CreateMap<ClassAbilitiesBasicInfo, ClassAbilitiesBasicInfoDto>();
         CreateMap<AddNewClassDto, AddNewClass>(); 
         CreateMap<ClassBasicInfo, ClassBasicInfoDto>();
+        CreateMap<NewRaceDto, NewRace>();
+        CreateMap<RacesBasicInfo, RacesBasicInfoDto>();
 
     }
 }
