@@ -21,7 +21,7 @@ public class GoodWebAutoMapperProfile : Profile
         CreateMap<AttributeBasicInfoDto, AttributeBasicInfoViewModel>();
         CreateMap<ClassBasicInfoDto, ClassBasicInfoViewModel>();
         CreateMap<NewAttributeViewModel, NewAttributeDto>();
-        
+        CreateMap<NewRankViewModel, NewRankDto>();
     }
 }
 

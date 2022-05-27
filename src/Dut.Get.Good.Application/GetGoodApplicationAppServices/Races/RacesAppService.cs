@@ -19,20 +19,20 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.Races
         }
         public async Task AddNewRace(NewRaceDto NewRace)
         {
-            var race = ObjectMapper.Map<NewRaceDto,NewRace>(NewRace);
-            await _racesRepository.AddNewRace(race);
+            var DbModel = ObjectMapper.Map<NewRaceDto,NewRace>(NewRace);
+            await _racesRepository.AddNewRace(DbModel);
         }
 
         public async Task<List<RaceBasicInfoDto>> GetAllRaces()
         {
-            var allRaces = await _racesRepository.GetAllRaces();
-            return ObjectMapper.Map<List<RacesBasicInfo>,List<RaceBasicInfoDto>>(allRaces);
+            var ReturnResult = await _racesRepository.GetAllRaces();
+            return ObjectMapper.Map<List<RacesBasicInfo>,List<RaceBasicInfoDto>>(ReturnResult);
         }
 
         public async Task<RaceBasicInfoDto> GetRaceById(Guid RaceId)
         {
-            var allRaces = await _racesRepository.GetRaceById(RaceId);
-            return ObjectMapper.Map<RacesBasicInfo, RaceBasicInfoDto>(allRaces);
+            var ReturnResult = await _racesRepository.GetRaceById(RaceId);
+            return ObjectMapper.Map<RacesBasicInfo, RaceBasicInfoDto>(ReturnResult);
         }
     }
 }

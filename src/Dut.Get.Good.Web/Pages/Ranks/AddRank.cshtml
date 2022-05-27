@@ -1,35 +1,37 @@
 ﻿@page
-@model Dut.Get.Good.Web.Pages.Attributes.AddNewAttributeModel
+@model Dut.Get.Good.Web.Pages.Ranks.AddRankModel
 
-<form method="post">
-    <div class="content">
-        <div class="container-fluid">
+<div class="content">
+    <div class="container-fluid">
+        <form method="post" id="NewRankForm" asp-page="AddRank">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-icon card-header-rose">
                             <div class="card-icon">
-                                <i class="material-icons">all_inclusive</i>
+                                <i class="material-icons">star</i>
                             </div>
                             <h4 class="card-title">
-                                Add New Attribute
+                                New Ranking
                             </h4>
                         </div>
                         <div class="card-body">
+                            @Html.AntiForgeryToken()
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        @*<label class="bmd-label-floating">Attibute</label>*@
-                                        <abp-input type="text" class="form-control" asp-for="@Model.ObjectToCreate.AttributeDescription" />
+                                        <label class="bmd-label-floating">Rank Description</label>
+                                        <input type="text" class="form-control" asp-for="@Model.ObjectToCreate.RankDescription">
+                                        <span asp-validation-for="@Model.ObjectToCreate.RankDescription" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-rose pull-right">Submit</button>
+                            <button type="submit" class="btn btn-rose pull-right">Add</button>
                             <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-</form>
+</div>
