@@ -4,55 +4,55 @@
 }
 <form method="post">
     <div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header card-header-icon card-header-rose">
-                        <div class="card-icon">
-                            <i class="material-icons">all_inclusive</i>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon card-header-rose">
+                            <div class="card-icon">
+                                <i class="material-icons">all_inclusive</i>
+                            </div>
+                            <h4 class="card-title">
+                                Class Ability Details
+                            </h4>
                         </div>
-                        <h4 class="card-title">
-                            Class Ability Details
-                        </h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="bmd-label-floating">Class</label>
-                                     <select asp-for="@Model.ObjectToCreate.ClassId" asp-items="Model.ClassSelectItem" class="custom-select"
-                                            data-toggle="tooltip"
-                                            data-placement="bottom"
-                                            title="Please select your marital status from the dropdown list">
-                                        <option value="">--Select Class--</option>
-                                    </select>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Class</label>
+                                        <select asp-for="@Model.ObjectToCreate.ClassId" asp-items="Model." class="custom-select"
+                                                data-toggle="tooltip"
+                                                data-placement="bottom"
+                                                title="Please select your marital status from the dropdown list">
+                                            <option value="">-- Select Class --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Attributes</label>
+                                        <select asp-for="@Model.ObjectToCreate.AttributeId" asp-items="Model.AttributeSelectItem" class="custom-select"
+                                                data-toggle="tooltip"
+                                                data-placement="bottom"
+                                                title="Please select your marital status from the dropdown list">
+                                            <option value="">-- Select Attribute --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <abp-input type="text" class="form-control" asp-for="@Model.ObjectToCreate.AbilityDescription" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="bmd-label-floating">Attributes</label>
-                                     <select asp-for="@Model.ObjectToCreate.AttributeId" asp-items="Model.AttributeSelectItem" class="custom-select"
-                                            data-toggle="tooltip"
-                                            data-placement="bottom"
-                                            title="Please select your marital status from the dropdown list">
-                                        <option value="">--Select Attribute--</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <abp-input type="text" class="form-control" asp-for="@Model.ObjectToCreate.AbilityDescription"/>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn btn-rose pull-right">Modify</button>
+                            <div class="clearfix"></div>
                         </div>
-                        <button type="submit" class="btn btn-rose pull-right">Modify</button>
-                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </form>
 

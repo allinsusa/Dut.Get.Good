@@ -1,7 +1,5 @@
-﻿using Dut.Get.Good.Web.ViewModels.Attributes;
-using Dut.Get.Good.Web.ViewModels.Class;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Dut.Get.Good.Web.ViewModels.ClassAbilities
@@ -9,10 +7,17 @@ namespace Dut.Get.Good.Web.ViewModels.ClassAbilities
     public class NewClassAbiltyViewModel
     {
         [Display(Name = "Abilty Description")]
+        [Required(ErrorMessage ="Ability Required")]
         public string AbilityDescription { get; set; }
+
+        [Required(ErrorMessage ="Select Class")]
+        [DisplayName("Class")]
         public Guid ClassId { get; set; }
-        public List<ClassSelectListViewModel> AllClasses { get; set; }
+
+        [Required(ErrorMessage = "Select Attribute")]
+        [DisplayName("Attribute")]
         public Guid AttributeId { get; set; }
-        public List<AttributeSelectListViewModel> AllAttributes { get; set; }
+
+
     }
 }

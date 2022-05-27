@@ -27,7 +27,7 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
         public async Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilities()
         {
             var ReturnResult = await _callAbilitiesRepository.GetAllClassAbilities();
-            return ObjectMapper.Map<List<ClassAbilityBasicInfo>,List<ClassAbilityBasicInfoDto>>(ReturnResult);
+            return ObjectMapper.Map<List<ClassAbilityBasicInfo>, List<ClassAbilityBasicInfoDto>>(ReturnResult);
         }
 
         public async Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId)
@@ -42,10 +42,10 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
             return ObjectMapper.Map<ClassAbilityBasicInfo, ClassAbilityBasicInfoDto>(ReturnResult);
         }
 
-        public async Task<NewClassAbilityDto> PopulateNewClassAbilityModel()
+        public async Task<ClassAbilityCreationDto> PopulateNewClassAbilityModel()
         {
-           var DbModel = await _classAbiltiesManager.PopulateNewClassAbilityModel();
-            return ObjectMapper.Map<NewClassAbility, NewClassAbilityDto>(DbModel);
+            var ReturnResult = await _classAbiltiesManager.PopulateNewClassAbilityModel();
+            return ObjectMapper.Map<ClassAbilityCreation, ClassAbilityCreationDto>(ReturnResult);
         }
     }
 }

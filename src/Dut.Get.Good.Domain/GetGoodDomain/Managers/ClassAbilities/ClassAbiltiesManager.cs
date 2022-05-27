@@ -1,51 +1,33 @@
-﻿using Dut.Get.Good.GetGoodDomain.Entities.Attributes;
-using Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities;
-using Dut.Get.Good.GetGoodDomain.Entities.Classes;
+﻿using Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities;
 using Dut.Get.Good.GetGoodDomain.EntityInterfaces;
 using Dut.Get.Good.GetGoodDomain.EntityInterfaces.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Services;
 
 namespace Dut.Get.Good.GetGoodDomain.Managers.ClassAbilities
 {
-    public class ClassAbiltiesManager: DomainService
+    public class ClassAbiltiesManager : DomainService
     {
         private readonly IAttributesRepository _attributesRepository;
         private readonly IClassRepository _classRepository;
-        public ClassAbiltiesManager(IAttributesRepository attributesRepository, IClassRepository classRepository)
+
+        public ClassAbiltiesManager(IAttributesRepository AttributesRepositoryObj, IClassRepository ClassRepositoryObj)
         {
-            _attributesRepository = attributesRepository;
-            _classRepository = classRepository;
+            _attributesRepository = AttributesRepositoryObj;
+            _classRepository = ClassRepositoryObj;
         }
-        public async Task<NewClassAbility> PopulateNewClassAbilityModel()
+
+        public async Task<ClassAbilityCreation> PopulateNewClassAbilityModel()
         {
-            var newClassAbility = new NewClassAbility();
-            var classSelect = new List<ClassSelectList>();
-            var attributeSelect = new List<AttributeSelectList>();
-            var attributesList = await _attributesRepository.GetAllAttributes();
-            attributesList.ForEach(a => {
-                attributeSelect.Add(new AttributeSelectList
-                {
-                    Text = a.AttributeDescription,
-                    Value = a.AttributeId
-                });
-            });
-            var allClasses = await _classRepository.GetAllClasses();
-            allClasses.ForEach(a => {
-                classSelect.Add(new ClassSelectList
-                {
-                    Text = a.ClassDescription,
-                    Value = a.ClassId
-                });
-            });
-            newClassAbility.AllClasses = classSelect;
-            newClassAbility.AllAttributes = attributeSelect;
-            return newClassAbility;
+            var AttributeReturnResult = await _attributesRepository.GetAllAttributes();
+            var ClassReturnResult = await _classRepository.GetAllClasses();
+
+            return new ClassAbilityCreation
+            {
+                Attributes = AttributeReturnResult,
+                Classess = ClassReturnResult
+            };
         }
-      
+
     }
 }

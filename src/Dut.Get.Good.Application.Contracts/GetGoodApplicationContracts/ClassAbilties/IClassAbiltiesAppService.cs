@@ -1,7 +1,6 @@
 ﻿using Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties
@@ -12,7 +11,7 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties
         Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilities();
         Task<ClassAbilityBasicInfoDto> GetClassAbilityById(Guid ClassAbilityId);
         Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId);
-        Task<NewClassAbilityDto> PopulateNewClassAbilityModel();
+        Task<ClassAbilityCreationDto> PopulateNewClassAbilityModel();
 
     }
 }
