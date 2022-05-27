@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dut.Get.Good.GetGoodApplicationContracts.Attributes.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.Class.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.Races.DTO;
@@ -18,10 +19,16 @@ public class GoodWebAutoMapperProfile : Profile
         CreateMap<RankBasicInfoDto, RankBasicInfoViewModel>();
         CreateMap<RaceBasicInfoDto, RaceBasicInfoViewModel>();
         CreateMap<ClassAbilityBasicInfoDto, ClassAbilityBasicInfoViewModel>();
+
+        CreateMap<NewClassAbiltyViewModel, NewClassAbilityDto>();
+        CreateMap<NewClassAbilityDto, NewClassAbiltyViewModel>();
+
         CreateMap<AttributeBasicInfoDto, AttributeBasicInfoViewModel>();
         CreateMap<ClassBasicInfoDto, ClassBasicInfoViewModel>();
         CreateMap<NewAttributeViewModel, NewAttributeDto>();
-        
+
+        CreateMap<ClassSelectListDto, ClassSelectListViewModel>();
+        CreateMap<AttributeSelectListDto, AttributeSelectListViewModel>();
     }
 }
 

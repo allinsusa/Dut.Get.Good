@@ -8,12 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="GetGoodDomain\Managers\**" />
-    <EmbeddedResource Remove="GetGoodDomain\Managers\**" />
-    <None Remove="GetGoodDomain\Managers\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Dut.Get.Good.Domain.Shared\Dut.Get.Good.Domain.Shared.csproj" />
   </ItemGroup>
 

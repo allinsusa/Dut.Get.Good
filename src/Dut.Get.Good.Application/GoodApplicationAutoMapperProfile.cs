@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dut.Get.Good.GetGoodApplicationContracts.Attributes.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.Class.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO;
 using Dut.Get.Good.GetGoodApplicationContracts.Races.DTO;
@@ -20,11 +21,15 @@ public class GoodApplicationAutoMapperProfile : Profile
         CreateMap<NewAttributeDto, NewAttribute>();
         CreateMap<AttributeBasicInfo, AttributeBasicInfoDto>();
         CreateMap<NewClassAbilityDto, NewClassAbility>();
+        CreateMap<NewClassAbility, NewClassAbilityDto>();
         CreateMap<ClassAbilityBasicInfo, ClassAbilityBasicInfoDto>();
         CreateMap<AddNewClassDto, AddNewClass>(); 
         CreateMap<ClassBasicInfo, ClassBasicInfoDto>();
         CreateMap<NewRaceDto, NewRace>();
         CreateMap<RacesBasicInfo, RaceBasicInfoDto>();
+        CreateMap<AttributeSelectList, AttributeSelectListDto>();
+        CreateMap<ClassSelectList, ClassSelectListDto>();
+
 
     }
 }
