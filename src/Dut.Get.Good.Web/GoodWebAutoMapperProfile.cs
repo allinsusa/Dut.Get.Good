@@ -30,6 +30,9 @@ public class GoodWebAutoMapperProfile : Profile
         CreateMap<ClassSelectListDto, ClassSelectListViewModel>();
         CreateMap<AttributeSelectListDto, AttributeSelectListViewModel>();
         CreateMap<NewRankViewModel, NewRankDto>();
+        CreateMap<AddNewClassViewModel, AddNewClassDto>();
+
+        
     }
 }
 
