@@ -2,6 +2,7 @@
 using Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO;
 using Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities;
 using Dut.Get.Good.GetGoodDomain.EntityInterfaces.CallAbilities;
+using Dut.Get.Good.GetGoodDomain.Managers.ClassAbilities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,10 +11,12 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
 {
     public class ClassAbiltiesAppService : GoodAppService, IClassAbiltiesAppService
     {
+        private readonly ClassAbiltiesManager _classAbiltiesManager;
         private readonly IClassAbilitiesRepository _callAbilitiesRepository;
-        public ClassAbiltiesAppService(IClassAbilitiesRepository callAbilitiesRepository)
+        public ClassAbiltiesAppService(IClassAbilitiesRepository callAbilitiesRepository, ClassAbiltiesManager classAbiltiesManager)
         {
             _callAbilitiesRepository = callAbilitiesRepository;
+            _classAbiltiesManager = classAbiltiesManager;
         }
         public async Task AddNewClassAbility(NewClassAbilityDto ClassAbilty)
         {
@@ -37,6 +40,12 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
         {
             var ReturnResult = await _callAbilitiesRepository.GetClassAbilityById(ClassAbilityId);
             return ObjectMapper.Map<ClassAbilityBasicInfo, ClassAbilityBasicInfoDto>(ReturnResult);
+        }
+
+        public async Task<NewClassAbilityDto> PopulateNewClassAbilityModel()
+        {
+           var DbModel = await _classAbiltiesManager.PopulateNewClassAbilityModel();
+            return ObjectMapper.Map<NewClassAbility, NewClassAbilityDto>(DbModel);
         }
     }
 }
