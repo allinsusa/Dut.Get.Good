@@ -24,10 +24,12 @@ namespace Dut.Get.Good.GetGoodRepository.AttributesRepository
 
         public async Task AddAttribute(NewAttribute AttributeModel, CancellationToken cancellationToken = default)
         {
-            var parameters = new SqlParameter[] {new SqlParameter("@AttributeDescription",AttributeModel.Description)};
+            var parameters = new SqlParameter[] {
+                new SqlParameter("@AttributeDescription",AttributeModel.AttributeDescription)
+            };
             await Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.EnsureConnectionOpenAsync(await GetDbContextAsync(), cancellationToken);
-            using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Attr_GetAttributeById", CommandType.StoredProcedure, parameters);
-            await command.ExecuteReaderAsync(cancellationToken);
+            using var command = Configuration.CommandAndConnectionManager.RepositoryCommandAndConnectionManager.CreateCommand(await GetDbContextAsync(), "Attr_AddNewAttribute", CommandType.StoredProcedure, parameters);
+            await command.ExecuteScalarAsync(cancellationToken);
         }
 
         

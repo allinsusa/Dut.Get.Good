@@ -5,7 +5,7 @@ using Volo.Abp.Application.Dtos;
 
 namespace Dut.Get.Good.GetGoodApplicationContracts.Ranks.DTO
 {
-    public class NewAttributeDto : EntityDto<Guid>
+    public class NewAttributeDto 
     {
         public string AttributeDescription { get; set; }
     }

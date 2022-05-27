@@ -8,6 +8,6 @@ namespace Dut.Get.Good.GetGoodDomain.Entities.Attributes
 {
     public class NewAttribute
     {
-        public string Description { get; set; }
+        public string AttributeDescription { get; set; }
     }
 }

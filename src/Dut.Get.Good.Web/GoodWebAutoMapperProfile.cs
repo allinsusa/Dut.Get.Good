@@ -20,6 +20,8 @@ public class GoodWebAutoMapperProfile : Profile
         CreateMap<ClassAbilityBasicInfoDto, ClassAbilityBasicInfoViewModel>();
         CreateMap<AttributeBasicInfoDto, AttributeBasicInfoViewModel>();
         CreateMap<ClassBasicInfoDto, ClassBasicInfoViewModel>();
+        CreateMap<NewAttributeViewModel, NewAttributeDto>();
+        
     }
 }
 

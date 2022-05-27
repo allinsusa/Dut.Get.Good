@@ -1,0 +1,35 @@
+﻿@page
+@model Dut.Get.Good.Web.Pages.Attributes.AddNewAttributeModel
+
+<form method="post">
+    <div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-header-rose">
+                        <div class="card-icon">
+                            <i class="material-icons">all_inclusive</i>
+                        </div>
+                        <h4 class="card-title">
+                            Add New Attribute
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    @*<label class="bmd-label-floating">Attibute</label>*@
+                                    <abp-input type="text" class="form-control" asp-for="@Model.ObjectToCreate.AttributeDescription"/>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-rose pull-right">Submit</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>
