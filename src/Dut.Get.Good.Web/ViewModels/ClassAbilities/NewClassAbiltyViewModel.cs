@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dut.Get.Good.Web.ViewModels.ClassAbilities
 {
@@ -18,6 +21,9 @@ namespace Dut.Get.Good.Web.ViewModels.ClassAbilities
         [DisplayName("Attribute")]
         public Guid AttributeId { get; set; }
 
-
+        [NotMapped]
+        public List<SelectListItem> AllClasses { get; set; }
+        [NotMapped]
+        public List<SelectListItem> AllAttribbutes { get; set; }
     }
 }
