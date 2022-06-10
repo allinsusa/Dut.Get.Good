@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dut.Get.Good.GetGoodApplicationContracts.Class.DTO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO
 {

@@ -47,5 +47,10 @@ namespace Dut.Get.Good.GetGoodApplicationAppServices.ClassAbilties
             var ReturnResult = await _classAbiltiesManager.PopulateNewClassAbilityModel();
             return ObjectMapper.Map<ClassAbilityCreation, ClassAbilityCreationDto>(ReturnResult);
         }
+        public async Task<ClassAbilityUpdateDto> GetUpdateClassAbilityById(Guid ClassAbilityId)
+        {
+            var ReturnResult = await _classAbiltiesManager.GetUpdateClassAbilityById(ClassAbilityId);
+            return ObjectMapper.Map<ClassAbilityUpdate, ClassAbilityUpdateDto>(ReturnResult);
+        }
     }
 }

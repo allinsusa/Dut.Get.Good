@@ -28,9 +28,10 @@ public class GoodApplicationAutoMapperProfile : Profile
         CreateMap<NewRaceDto, NewRace>();
         CreateMap<RacesBasicInfo, RaceBasicInfoDto>();
         CreateMap<AttributeSelectList, AttributeSelectListDto>();
-        CreateMap<ClassSelectList, ClassSelectListDto>();
+        CreateMap<ClassSelectList, TextValuePairsDto>();
         CreateMap<ClassAbilityCreation, ClassAbilityCreationDto>();
-
+        CreateMap<TextValuePairs, TextValuePairsDto>();
+        CreateMap<ClassAbilityUpdate, ClassAbilityUpdateDto>();
 
     }
 }

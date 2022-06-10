@@ -7,5 +7,6 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties.DTO
         public Guid ClassId { get; set; }
         public Guid AttributeId { get; set; }
         public string AbilityDescription { get; set; }
+        
     }
 }

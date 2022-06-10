@@ -13,7 +13,7 @@
                                 <i class="material-icons">all_inclusive</i>
                             </div>
                             <h4 class="card-title">
-                                Class Ability Details
+                                Create Class Ability
                             </h4>
                         </div>
                         <div class="card-body">
@@ -21,7 +21,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Class</label>
-                                        <select asp-for="@Model.ObjectToCreate.ClassId" asp-items="@Model.ObjectToCreate.AllClasses" class="custom-select"
+                                        <select asp-for="@Model.ObjectToCreate.ClassId" asp-items="@(new SelectList(Model.ObjectToCreate.AllClasses, "Value", "Text"))" class="custom-select"
                                                 data-toggle="tooltip"
                                                 data-placement="bottom"
                                                 title="Please select your marital status from the dropdown list">
@@ -32,7 +32,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Attributes</label>
-                                        <select asp-for="@Model.ObjectToCreate.AttributeId" asp-items="@Model.ObjectToCreate.AllAttribbutes" class="custom-select"
+                                        <select asp-for="@Model.ObjectToCreate.AttributeId" asp-items="@(new SelectList(Model.ObjectToCreate.AllAttribbutes, "Value", "Text"))" class="custom-select"
                                                 data-toggle="tooltip"
                                                 data-placement="bottom"
                                                 title="Please select your marital status from the dropdown list">

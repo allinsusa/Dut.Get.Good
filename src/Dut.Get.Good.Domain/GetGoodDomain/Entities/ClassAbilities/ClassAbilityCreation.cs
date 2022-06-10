@@ -6,13 +6,13 @@ namespace Dut.Get.Good.GetGoodDomain.Entities.ClassAbilities
 {
     public class ClassAbilityCreation
     {
-        public List<AttributeBasicInfo> Attributes { get; set; }
-        public List<ClassBasicInfo> Classess { get; set; }
+        public List<TextValuePairs> Attributes { get; set; }
+        public List<TextValuePairs> Classess { get; set; }
 
         public ClassAbilityCreation()
         { 
-            Attributes = new List<AttributeBasicInfo>();
-            Classess = new List<ClassBasicInfo>();
+            Attributes = new List<TextValuePairs>();
+            Classess = new List<TextValuePairs>();
         }
     }
 }

@@ -12,6 +12,6 @@ namespace Dut.Get.Good.GetGoodApplicationContracts.ClassAbilties
         Task<ClassAbilityBasicInfoDto> GetClassAbilityById(Guid ClassAbilityId);
         Task<List<ClassAbilityBasicInfoDto>> GetAllClassAbilitiesByClassId(Guid ClassId);
         Task<ClassAbilityCreationDto> PopulateNewClassAbilityModel();
-
+        Task<ClassAbilityUpdateDto> GetUpdateClassAbilityById(Guid ClassAbilityId);
     }
 }

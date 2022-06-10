@@ -16,9 +16,94 @@
 
   <ItemGroup>
     <Compile Remove="Logs\**" />
+    <Compile Remove="wwwroot\libs\%40fortawesome\**" />
+    <Compile Remove="wwwroot\libs\abp\**" />
+    <Compile Remove="wwwroot\libs\bootstrap-datepicker\**" />
+    <Compile Remove="wwwroot\libs\bootstrap\**" />
+    <Compile Remove="wwwroot\libs\datatables.net-bs5\**" />
+    <Compile Remove="wwwroot\libs\datatables.net\**" />
+    <Compile Remove="wwwroot\libs\jquery-form\**" />
+    <Compile Remove="wwwroot\libs\jquery-validation-unobtrusive\**" />
+    <Compile Remove="wwwroot\libs\jquery-validation\**" />
+    <Compile Remove="wwwroot\libs\jquery\**" />
+    <Compile Remove="wwwroot\libs\lodash\**" />
+    <Compile Remove="wwwroot\libs\luxon\**" />
+    <Compile Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\**" />
+    <Compile Remove="wwwroot\libs\select2\**" />
+    <Compile Remove="wwwroot\libs\theme\**" />
+    <Compile Remove="wwwroot\libs\timeago\**" />
+    <Compile Remove="wwwroot\libs\toastr\**" />
     <Content Remove="Logs\**" />
+    <Content Remove="wwwroot\libs\%40fortawesome\**" />
+    <Content Remove="wwwroot\libs\abp\**" />
+    <Content Remove="wwwroot\libs\bootstrap-datepicker\**" />
+    <Content Remove="wwwroot\libs\bootstrap\**" />
+    <Content Remove="wwwroot\libs\datatables.net-bs5\**" />
+    <Content Remove="wwwroot\libs\datatables.net\**" />
+    <Content Remove="wwwroot\libs\jquery-form\**" />
+    <Content Remove="wwwroot\libs\jquery-validation-unobtrusive\**" />
+    <Content Remove="wwwroot\libs\jquery-validation\**" />
+    <Content Remove="wwwroot\libs\jquery\**" />
+    <Content Remove="wwwroot\libs\lodash\**" />
+    <Content Remove="wwwroot\libs\luxon\**" />
+    <Content Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\**" />
+    <Content Remove="wwwroot\libs\select2\**" />
+    <Content Remove="wwwroot\libs\theme\**" />
+    <Content Remove="wwwroot\libs\timeago\**" />
+    <Content Remove="wwwroot\libs\toastr\**" />
     <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="wwwroot\libs\%40fortawesome\**" />
+    <EmbeddedResource Remove="wwwroot\libs\abp\**" />
+    <EmbeddedResource Remove="wwwroot\libs\bootstrap-datepicker\**" />
+    <EmbeddedResource Remove="wwwroot\libs\bootstrap\**" />
+    <EmbeddedResource Remove="wwwroot\libs\datatables.net-bs5\**" />
+    <EmbeddedResource Remove="wwwroot\libs\datatables.net\**" />
+    <EmbeddedResource Remove="wwwroot\libs\jquery-form\**" />
+    <EmbeddedResource Remove="wwwroot\libs\jquery-validation-unobtrusive\**" />
+    <EmbeddedResource Remove="wwwroot\libs\jquery-validation\**" />
+    <EmbeddedResource Remove="wwwroot\libs\jquery\**" />
+    <EmbeddedResource Remove="wwwroot\libs\lodash\**" />
+    <EmbeddedResource Remove="wwwroot\libs\luxon\**" />
+    <EmbeddedResource Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\**" />
+    <EmbeddedResource Remove="wwwroot\libs\select2\**" />
+    <EmbeddedResource Remove="wwwroot\libs\theme\**" />
+    <EmbeddedResource Remove="wwwroot\libs\timeago\**" />
+    <EmbeddedResource Remove="wwwroot\libs\toastr\**" />
     <None Remove="Logs\**" />
+    <None Remove="wwwroot\libs\%40fortawesome\**" />
+    <None Remove="wwwroot\libs\abp\**" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\**" />
+    <None Remove="wwwroot\libs\bootstrap\**" />
+    <None Remove="wwwroot\libs\datatables.net-bs5\**" />
+    <None Remove="wwwroot\libs\datatables.net\**" />
+    <None Remove="wwwroot\libs\jquery-form\**" />
+    <None Remove="wwwroot\libs\jquery-validation-unobtrusive\**" />
+    <None Remove="wwwroot\libs\jquery-validation\**" />
+    <None Remove="wwwroot\libs\jquery\**" />
+    <None Remove="wwwroot\libs\lodash\**" />
+    <None Remove="wwwroot\libs\luxon\**" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\**" />
+    <None Remove="wwwroot\libs\select2\**" />
+    <None Remove="wwwroot\libs\theme\**" />
+    <None Remove="wwwroot\libs\timeago\**" />
+    <None Remove="wwwroot\libs\toastr\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\%40fortawesome\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\abp\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\bootstrap-datepicker\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\bootstrap\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\datatables.net-bs5\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\datatables.net\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\jquery-form\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\jquery-validation-unobtrusive\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\jquery-validation\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\jquery\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\lodash\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\luxon\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\select2\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\theme\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\timeago\**" />
+    <TypeScriptCompile Remove="wwwroot\libs\toastr\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,32 +147,10 @@
     <None Include="Pages\Shared\_Scripts.cshtml" />
     <None Include="Pages\Shared\_SideBarLayout.cshtml" />
     <None Include="Pages\Shared\_StyleSheet.cshtml" />
-    <None Include="wwwroot\libs\theme\css\material-dashboard.css.map" />
-    <None Include="wwwroot\libs\theme\js\core\bootstrap-material-design.min.js" />
-    <None Include="wwwroot\libs\theme\js\core\jquery.min.js" />
-    <None Include="wwwroot\libs\theme\js\core\popper.min.js" />
-    <None Include="wwwroot\libs\theme\js\material-dashboard.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\arrive.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-datetimepicker.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-notify.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-selectpicker.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\bootstrap-tagsinput.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\chartist.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\fullcalendar.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\jasny-bootstrap.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\jquery-jvectormap.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\jquery.bootstrap-wizard.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\jquery.dataTables.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\jquery.tagsinput.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\jquery.validate.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\moment.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\nouislider.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\perfect-scrollbar.jquery.min.js" />
-    <None Include="wwwroot\libs\theme\js\plugins\sweetalert2.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\libs\theme\" />
+    <Folder Include="wwwroot\libs\" />
   </ItemGroup>
 
 </Project>
