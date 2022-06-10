@@ -62,13 +62,16 @@ namespace Dut.Get.Good.GetGoodDomain.Managers.ClassAbilities
 
         public async Task<ClassAbilityUpdate> GetUpdateClassAbilityById(Guid ClassAbilityId)
         {
-            var ClassAbilityUpdate = new ClassAbilityUpdate();
             var ReturnResult = await _classAbilitiesRepository.GetClassAbilityById(ClassAbilityId);
             var dropdownLists = await PopulateNewClassAbilityModel();
-            ClassAbilityUpdate.ClassAbilityBasicInfo = ReturnResult;
-            ClassAbilityUpdate.AllClasses = dropdownLists.Classess;
-            ClassAbilityUpdate.AllAttribbutes = dropdownLists.Attributes;
-            return ClassAbilityUpdate;
+
+            return new ClassAbilityUpdate()
+            {
+                ClassAbilityBasicInfo = ReturnResult,
+                AllClasses = dropdownLists.Classess,
+                AllAttribbutes = dropdownLists.Attributes
+            };
+           
         }
     }
 }
